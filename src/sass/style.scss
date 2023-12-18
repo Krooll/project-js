@@ -1,5 +1,8 @@
-// Import Bootstrap styles
-@import "~bootstrap/dist/css/bootstrap.min.css";
+// normalize default styles
+@import "normalize";
+
+// Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 // variables
 @import "variables";
