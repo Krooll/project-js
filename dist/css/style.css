@@ -1,0 +1,6 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zYXNzL3N0eWxlLnNjc3MiLCIuLi8uLi9zcmMvc2Fzcy9fZ2xvYmFsLnNjc3MiLCJzdHlsZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ1EsK0NBQUE7QUNEUjtFQUNFLHNCQUFBO0FDRUYiLCJmaWxlIjoic3R5bGUuY3NzIn0= */
