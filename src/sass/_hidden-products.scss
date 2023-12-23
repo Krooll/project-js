@@ -1,0 +1,44 @@
+.hidden-products {
+  // display: none;
+  height: auto;
+  width: 100%;
+}
+
+.products-list {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .product-title {
+    height: auto;
+    width: 40%;
+    text-align: center;
+  }
+
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    .product-image {
+      height: 300px;
+      width: 400px;
+      border: 2px solid;
+      margin: 20px;
+    }
+
+    .product-description {
+      height: 300px;
+      width: 400px;
+      border: 2px solid;
+      margin: 20px;
+    }
+  }
+}
+
+.active {
+  display: block;
+}

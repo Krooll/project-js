@@ -2,7 +2,7 @@
     "products": [
         {
             "id": "1",
-            "title": "LA LAGARTIJA",
+            "title": "0.1 LA LAGARTIJA",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel leo vitae orci scelerisque tristique.Proin aliquet ut libero eu eleifend.",
             "image": "./images/coffee-1.png",
             "roasting": "5",
@@ -11,7 +11,7 @@
 
         {
             "id": "2",
-            "title": "EL TIGRE",
+            "title": "0.2 EL TIGRE",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel leo vitae orci scelerisque tristique.Proin aliquet ut libero eu eleifend.",
             "image": "./images/coffee-2.png",
             "roasting": "8",
@@ -20,7 +20,7 @@
 
         {
             "id": "3",
-            "title": "LA CUCARACHA",
+            "title": "0.3 LA CUCARACHA",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel leo vitae orci scelerisque tristique.Proin aliquet ut libero eu eleifend.",
             "image": "./images/coffee-3.png",
             "roasting": "3",

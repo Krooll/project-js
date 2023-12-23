@@ -1,0 +1,148 @@
+@import './typography';
+
+.header-section {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../db/images/background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header {
+  height: auto;
+  width: 100%;
+  color: $white-color;
+}
+
+.header-brandname {
+  margin-top: 20px;
+
+  .title{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .subtitle{
+    margin: 0;
+    font-size: 0.8rem;
+  }
+}
+
+.header-links {
+  margin-top: 20px;
+  text-align: right;
+
+  .link {
+    font-size: 1rem;
+    display: inline-block;
+    margin: 0 5px;
+    text-decoration: none;
+    color: $white-color;
+  }
+
+  .link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $gold-color;
+    transition: width .3s;
+  }
+  
+  .link:hover::after {
+    width: 100%;
+  }
+}
+
+.header-subsection {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  color: $gold-color;
+  -webkit-text-stroke: 0.3px $black-color;
+    
+
+  .title-subsection{
+    height: 80%;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+        
+    .header-title{
+      font-size: 3rem;
+    }
+
+    .title-firstline{
+      height: auto;
+      width: 50%;
+      text-align: left;
+      position: absolute;
+      bottom: 60%;
+    }
+
+    .title-secondline{
+      height: auto;
+      width: 60%;
+      position: absolute;
+      top: 34%;
+      left: 20%;
+      text-align: center;
+    }
+
+    .title-bottomline{
+      position: absolute;
+      height: auto;
+      width: 40%;
+      top: 70%;
+      left: 30%;
+    }
+  }
+}
+
+.header-button {
+  position: absolute;
+  top: 70%;
+  height: 40%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white-color;
+
+  .button-title{
+    margin-bottom: 30px;
+  }
+    
+  .button{
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: $white-color;
+    transform: rotate(180deg);
+  }
+
+  .button:hover{
+    transform: scale(1.25) rotate(180deg);
+    transition: 0.3s;
+  }
+}
+
+.active-button {
+  transition: 0.3s;
+  transform: rotate(180deg);
+}
+
+.bottomline{
+  height: 100px;
+  border: 2px solid;
+}
