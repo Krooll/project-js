@@ -9,10 +9,11 @@ export const settings = {
     productList: '#product-list',
     contact: '#contact-list',
     pages: '#pages',
+    hiddenProducts: '#hidden-products',
   },
 
   products: {
-    description: '.product-description'
+    description: '.product-description',
   },
 
   db: {
@@ -20,8 +21,11 @@ export const settings = {
     products: 'products',
   },
   nav: {
-    links: '.header-links a'
-  }
+    links: '.header-links a',
+  },
+  buttons:{
+    showButton: '#show',
+  } 
 };
 
 export const classNames = {
@@ -31,6 +35,9 @@ export const classNames = {
   nav: {
     active: 'active',
   },
+  class: {
+    active: 'active',
+  }
 };
 
 export const templates = {

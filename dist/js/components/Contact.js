@@ -14,11 +14,11 @@ class Contact{
 
   render(element){
     const thisProduct = this;
-        const generatedHTML = templates.contact();
-        thisProduct.dom = {};
+    const generatedHTML = templates.contact();
+    thisProduct.dom = {};
 
-        thisProduct.dom.wrapper = element;
-        thisProduct.dom.wrapper.innerHTML = generatedHTML;
+    thisProduct.dom.wrapper = element;
+    thisProduct.dom.wrapper.innerHTML = generatedHTML;
   }
 }
 

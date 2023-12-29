@@ -62,7 +62,7 @@ const app = {
     const thisApp = this;
 
     thisApp.homeContainer = document.querySelector(settings.containerOf.home);
-    thisApp.home = new Home(thisApp.homeContainer);
+    thisApp.home = new Home(thisApp.homeContainer, thisApp.data.products);
   },
 
   initContact: function() {
@@ -83,6 +83,7 @@ const app = {
       .then((parsedResponse) => {
         thisApp.data.products = parsedResponse;
         this.initProducts();
+        thisApp.initHome();
       });
   },
 
@@ -90,7 +91,6 @@ const app = {
     const thisApp = this;
     thisApp.initPages();
     thisApp.initData();
-    thisApp.initHome();
     thisApp.initContact();
   },
 };
