@@ -23,17 +23,6 @@
                 </div>
             </div>
         </header>
-        <div class="pages">
-            <section id="home">
-                <div class="home-page"></div>
-            </section>
-            <section id="products">
-                <div class="product-list container"></div>
-            </section>
-            <section id="contact">
-                <div class="booking-wrapper container"></div>
-            </section>
-        </div>
         <div class="container header-subsection">
             <div class="title-subsection">
                 <div class="title-firstline">
@@ -52,7 +41,51 @@
             </div>
         </div>
     </section>
-    <script class="hidden-products" type="text/x-handlebars-template">
+    <div id="pages">
+        <section id="home">
+            <div id="home-list"></div>
+        </section>
+        <section id="products">
+            <div id="product-list" class="products-list container"></div>
+        </section>
+        <section id="contact">
+            <div id="contact-list" class="contact container"></div>
+        </section>
+    </div>
+    <script id="template-home" type="text/x-handlebars-template">
+        <div id="hidden-products">
+            <div class="container">
+                <div class="products-list">
+                    <div class="product-title">
+                        <h2>Products</h2>
+                        <div class="line"></div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <p>product image</p>
+                        </div>
+                        <div class="product-description">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="about-us">
+            <div class="container d-flex flex-column align-items-center justify-content-center">
+                <div class="about-title">
+                    <h2>About Us</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="about-description">
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </script>
+    <script id="template-products" type="text/x-handlebars-template">
         <div class="container">
             <div class="products-list">
                 <div class="product-title">
@@ -61,29 +94,16 @@
                 </div>
                 <div class="product">
                     <div class="product-image">
-
+                        <p>product image</p>
                     </div>
                     <div class="product-description">
-
+                        <p></p>
                     </div>
                 </div>
             </div>
         </div>
     </script>
-    <section class="about-us" >
-        <div class="container d-flex flex-column align-items-center justify-content-center">
-            <div class="about-title">
-                <h2>About Us</h2>
-                <div class="line"></div>
-            </div>
-            <div class="about-description">
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script class="contact-us" type="text/x-handlebars-template">
+    <script id="template-contact" type="text/x-handlebars-template">
         <div class="contact">
             <p>contact</p>
         </div>

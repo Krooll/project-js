@@ -1,12 +1,11 @@
 import Product from './components/Products.js';
-import { settings } from './settings.js';
+import { classNames, settings } from './settings.js';
 
 const app = {
-  /*initPages: function(){
+  initPages: function(){
     const thisApp = this;
 
     thisApp.pages = document.querySelector(settings.containerOf.pages).children;
-    console.log('thisapppages', thisApp.pages);
     thisApp.navLinks = document.querySelectorAll(settings.navLinks.links);
 
     const idFromHash = window.location.hash.replace('#/', '');
@@ -25,39 +24,42 @@ const app = {
       link.addEventListener('click', (e) => {
         const clickedElement = e.currentTarget;
         e.preventDefault();
+
         /*get page id from href*/
-  // const id = clickedElement.getAttribute('href').replace('#', '');
-  /*run thisApp.activatePage with that id*/
-  //thisApp.activatePage(id);
+        const id = clickedElement.getAttribute('href').replace('#', '');
+        /*run thisApp.activatePage with that id*/
+        thisApp.activatePage(id);
 
-  /*change URL hash*/
-  // window.location.hash = '#/' + id;
-  //});
-  //}
-  // },
+        /*change URL hash*/
+        window.location.hash = '#/' + id;
+      });
+    }
+  },
 
-  /*activatePage: function(pageId){
+  activatePage: function(pageId){
     const thisApp = this;
 
     /* add class active to matching pages, remove from non-matching*/
-  //for(let page of thisApp.pages){
-  //page.classList.toggle(classNames.pages.active, page.id === pageId);
-  //}
-  /* add class active to matching link, remove from non-link*/
-  /*for(let link of thisApp.navLinks){
+    for(let page of thisApp.pages){
+      page.classList.toggle(classNames.pages.active, page.id === pageId);
+    }
+    /* add class active to matching link, remove from non-link*/
+    for(let link of thisApp.navLinks){
       link.classList.toggle(
         classNames.nav.active, 
-        link.getAttribute('href') === '#' + pageId
+        link.getAttribute('href') === '#/' + pageId
       );
     }
-
-    console.log('activepage', thisApp.pages);
-  },*/
+  },
 
   initMenu: function() {
     const thisApp = this;
 
-    thisApp.products = new Product(thisApp.data.products);
+    thisApp.products = thisApp.data.products;
+
+    thisApp.productsContainer = document.querySelector(settings.containerOf.productList);
+
+    thisApp.productList = new Product(thisApp.productsContainer, thisApp.products);
   },
 
   initData: function() {
@@ -76,7 +78,7 @@ const app = {
 
   init: function() {
     const thisApp = this;
-    /*thisApp.initPages();*/
+    thisApp.initPages();
     thisApp.initData();
   },
 };

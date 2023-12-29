@@ -1,7 +1,11 @@
-.hidden-products {
-  // display: none;
+.template-products {
+  display: none;
   height: auto;
   width: 100%;
+}
+
+.active {
+  display: block;
 }
 
 .products-list {
@@ -39,6 +43,3 @@
   }
 }
 
-.active {
-  display: block;
-}
