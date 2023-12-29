@@ -18,6 +18,12 @@ body {
   border-radius: 20px;
 }
 
-.active {
-  display: block;
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
 }

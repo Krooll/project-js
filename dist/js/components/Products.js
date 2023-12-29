@@ -1,27 +1,25 @@
-import { templates } from '../settings.js';
+import { settings, templates } from '../settings.js';
 
-class Product{
-  constructor(data, element){
+class Products{
+  constructor(data){
     const thisProduct = this;
 
-    thisProduct.productList = data;
+    thisProduct.products = data;
     thisProduct.getElements();
-    thisProduct.render(element);
+    thisProduct.render();
   }
 
   getElements(){
-   
+    const thisProduct = this; 
+
+    thisProduct.productContainer = document.querySelector(settings.containerOf.productList);
   }
 
-  render(element){
-    const thisBooking = this;
-    const generatedHTML = templates.products(thisBooking.productList);
-    thisBooking.dom = {};
-
-    thisBooking.dom.wrapper = element;
-    thisBooking.dom.wrapper.innerHTML = generatedHTML;
-    console.log(thisBooking.dom.wrapper.innerHTML);
+  render(){
+    const thisProduct = this;
+    const generatedHTML = templates.products();
+    thisProduct.productContainer.innerHTML = generatedHTML;
   }
 }
 
-export default Product;
+export default Products;

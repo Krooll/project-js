@@ -19,7 +19,7 @@ export const settings = {
     url: '//localhost:3131',
     products: 'products',
   },
-  navLinks: {
+  nav: {
     links: '.header-links a'
   }
 };

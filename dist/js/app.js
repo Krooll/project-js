@@ -1,4 +1,6 @@
-import Product from './components/Products.js';
+import Contact from './components/Contact.js';
+import Home from './components/Home.js';
+import Products from './components/Products.js';
 import { classNames, settings } from './settings.js';
 
 const app = {
@@ -6,7 +8,7 @@ const app = {
     const thisApp = this;
 
     thisApp.pages = document.querySelector(settings.containerOf.pages).children;
-    thisApp.navLinks = document.querySelectorAll(settings.navLinks.links);
+    thisApp.navLinks = document.querySelectorAll(settings.nav.links);
 
     const idFromHash = window.location.hash.replace('#/', '');
     let pageMatchingHash = thisApp.pages[0].id;
@@ -24,12 +26,10 @@ const app = {
       link.addEventListener('click', (e) => {
         const clickedElement = e.currentTarget;
         e.preventDefault();
-
         /*get page id from href*/
         const id = clickedElement.getAttribute('href').replace('#', '');
         /*run thisApp.activatePage with that id*/
         thisApp.activatePage(id);
-
         /*change URL hash*/
         window.location.hash = '#/' + id;
       });
@@ -47,19 +47,29 @@ const app = {
     for(let link of thisApp.navLinks){
       link.classList.toggle(
         classNames.nav.active, 
-        link.getAttribute('href') === '#/' + pageId
+        link.getAttribute('href') === '#' + pageId
       );
     }
   },
 
-  initMenu: function() {
+  initProducts: function() {
     const thisApp = this;
 
-    thisApp.products = thisApp.data.products;
+    thisApp.products = new Products(thisApp.data.products);
+  },
 
-    thisApp.productsContainer = document.querySelector(settings.containerOf.productList);
+  initHome: function() {
+    const thisApp = this;
 
-    thisApp.productList = new Product(thisApp.productsContainer, thisApp.products);
+    thisApp.homeContainer = document.querySelector(settings.containerOf.home);
+    thisApp.home = new Home(thisApp.homeContainer);
+  },
+
+  initContact: function() {
+    const thisApp = this; 
+
+    thisApp.contactContainer = document.querySelector(settings.containerOf.contact);
+    thisApp.contact = new Contact(thisApp.contactContainer);
   },
 
   initData: function() {
@@ -72,7 +82,7 @@ const app = {
       })
       .then((parsedResponse) => {
         thisApp.data.products = parsedResponse;
-        thisApp.initMenu();
+        this.initProducts();
       });
   },
 
@@ -80,6 +90,8 @@ const app = {
     const thisApp = this;
     thisApp.initPages();
     thisApp.initData();
+    thisApp.initHome();
+    thisApp.initContact();
   },
 };
 
