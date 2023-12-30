@@ -128,18 +128,17 @@
     border: none;
     font-size: 2.5rem;
     color: $white-color;
-    transform: rotate(180deg);
+
+    &.active-button {
+      transition: 0.3s;
+      transform: rotate(180deg);
+    }
   }
 
-  .button:hover{
-    transform: scale(1.25) rotate(180deg);
+  .button:hover {
+    transform: scale(1.25);
     transition: 0.3s;
   }
-}
-
-.active-button {
-  transition: 0.3s;
-  transform: rotate(180deg);
 }
 
 .bottomline{

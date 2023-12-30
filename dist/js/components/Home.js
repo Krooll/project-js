@@ -8,6 +8,7 @@ class Home{
     thisHome.getElements();
     thisHome.render(element);
     thisHome.showHiddenSection();
+    thisHome.renderData();
   }
 
   getElements(){
@@ -25,17 +26,27 @@ class Home{
     thisHome.dom.wrapper = element;
     thisHome.dom.wrapper.innerHTML = generatedHTML;
     thisHome.dom.hiddenContainer = thisHome.dom.wrapper.querySelector(settings.containerOf.hiddenProducts);
+ 
+    thisHome.dom.productsListContainer = thisHome.dom.wrapper.querySelector(settings.productDataContainers.product);
+    thisHome.dom.productTitle = thisHome.dom.wrapper.querySelector(settings.productDataContainers.productTitle);
+    thisHome.dom.productImage = thisHome.dom.wrapper.querySelector(settings.productDataContainers.productImage);
+    thisHome.dom.productDescription = thisHome.dom.wrapper.querySelector(settings.productDataContainers.productDescription);
+    thisHome.dom.productIntensity = thisHome.dom.wrapper.querySelector(settings.productDataContainers.productIntensity);
+    thisHome.dom.productRoasting = thisHome.dom.wrapper.querySelector(settings.productDataContainers.productRoasting);
   }
 
   showHiddenSection(){
     const thisHome = this;
 
     thisHome.button.addEventListener('click', (e) =>{
+      console.log(thisHome.button);
       e.preventDefault();
       if(thisHome.dom.hiddenContainer.classList.contains(classNames.class.active)){
-        thisHome.dom.hiddenContainer.classList.remove(classNames.class.active)
+        thisHome.dom.hiddenContainer.classList.remove(classNames.class.active);
+        thisHome.button.classList.remove(classNames.class.rotate);
       }else{
         thisHome.dom.hiddenContainer.classList.add(classNames.class.active);
+        thisHome.button.classList.add(classNames.class.rotate);
       }
     });
   }
@@ -43,7 +54,30 @@ class Home{
   renderData(){
     const thisHome = this;
 
-    
+    const productsHTML = thisHome.data.map(product =>`
+      <div id="product">
+        <div class="image">
+          <img id="product-image" src="${product.image}" alt="Product Image">
+        </div>
+        <div class="product-description">
+          <div class="products-title">
+            <h4><span id="title">${product.title}</span></h4>
+          </div>
+          <div class="main-description">
+            <div class="description-line"></div>
+            <div class="description">
+              <p><span id="info-description">${product.description}</span></p>
+            </div>
+          </div>
+          <div class="description-info">
+            <p class="description-title">Intensity:<span id="info-intensity">${product.intensity}</span></p>
+            <p class="description-title">Roasting:<span id="info-roasting">${product.roasting}</span></p>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    thisHome.dom.productsListContainer.innerHTML = productsHTML;
   }
 }
 

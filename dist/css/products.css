@@ -1,32 +1,31 @@
-.products-list {
+#products-list {
   height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.products-list .product-title {
+#products-list .product-title {
   height: auto;
   width: 40%;
   text-align: center;
 }
-.products-list .product {
+
+#product {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.products-list .product .product-image {
+#product .product-image {
   height: 300px;
   width: 400px;
-  border: 2px solid;
   margin: 20px;
 }
-.products-list .product .product-description {
+#product .product-description {
   height: 300px;
   width: 400px;
-  border: 2px solid;
   margin: 20px;
 }
 
-/*# sourceMappingURL=products.css.map */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zYXNzL3Byb2R1Y3RzLnNjc3MiLCJwcm9kdWN0cy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFBO0VBQ0EsV0FBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtFQUNBLG1CQUFBO0FDQ0Y7QURDRTtFQUNFLFlBQUE7RUFDQSxVQUFBO0VBQ0Esa0JBQUE7QUNDSjs7QURHQTtFQUNFLGFBQUE7RUFDQSxlQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtBQ0FGO0FERUU7RUFDRSxhQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7QUNBSjtBREdFO0VBQ0UsYUFBQTtFQUNBLFlBQUE7RUFDQSxZQUFBO0FDREoiLCJmaWxlIjoicHJvZHVjdHMuY3NzIn0= */

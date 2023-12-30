@@ -12,8 +12,13 @@ export const settings = {
     hiddenProducts: '#hidden-products',
   },
 
-  products: {
-    description: '.product-description',
+  productDataContainers: {
+    product: '#products-list',
+    productTitle: '#title',
+    productImage: '#product-image',
+    productDescription: '#info-description',
+    productIntensity: '#info-intensity',
+    productRoasting: '#info-roasting',
   },
 
   db: {
@@ -37,6 +42,7 @@ export const classNames = {
   },
   class: {
     active: 'active',
+    rotate: 'active-button',
   }
 };
 
