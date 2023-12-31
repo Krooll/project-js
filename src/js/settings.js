@@ -21,13 +21,21 @@ export const settings = {
   db: {
     url: '//localhost:3131',
     products: 'products',
+    mails: 'mails',
   },
   nav: {
     links: '.header-links a',
   },
   buttons:{
     showButton: '#show',
-  } 
+    submitButton: '#submit-button',
+  },
+  mailForm: {
+    name: '#name',
+    mail: '#e-mail',
+    topic: '#topic',
+    message: '#message',
+  }
 };
 
 export const classNames = {

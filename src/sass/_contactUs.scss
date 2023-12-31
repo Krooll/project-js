@@ -1,83 +1,84 @@
 @import './typography';
 
 .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contact-title{
+    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+    margin-top: 30px;
 
-    .contact-title{
+    .contact-text {
+      height: auto;
+      width: auto;
+      max-width: 400px;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  .contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form-personal{
+      display: flex;
+      flex-direction: column;
+
+      .form-label{
+        margin-top: 10px;
+      }
+
+      .form-input{
+        border: 1px solid;
+        border-radius: 5px;
+        border-color: $gold-color;
+        padding: 5px;
+      }
+    }
+
+    .form-message{
+      height: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+
+      #message{
+        border-color: $gold-color;
+        border-radius: 5px;
+      }
+    }
+
+    .form-button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+
+      #submit-button{
         height: auto;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
+        width: 100px;
+        padding: 5px;
+        border: none;
+        border-radius: 10px;
+        background-color: $gold-color;
+        color: white;
+      }
 
-        .contact-text {
-            height: auto;
-            width: auto;
-            max-width: 400px;
-            text-align: center;
-            margin-top: 30px;
-        }
+      #submit-button:hover{
+        transform: scale(1.11);
+        transition: 0.3s;
+      }
     }
-
-    .contact-form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        .form-personal{
-            display: flex;
-            flex-direction: column;
-
-            .form-label{
-                margin-top: 10px;
-            }
-
-            .form-input{
-                border: 1px solid;
-                border-radius: 5px;
-                border-color: $gold-color;
-            }
-        }
-
-        .form-message{
-            height: auto;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            margin-top: 10px;
-
-            #message{
-                border-color: $gold-color;
-                border-radius: 5px;
-            }
-        }
-
-        .form-button{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 5px;
-
-            #submit-button{
-                height: auto;
-                width: 100px;
-                padding: 5px;
-                border: none;
-                border-radius: 10px;
-                background-color: $gold-color;
-                color: white;
-            }
-
-            #submit-button:hover{
-                transform: scale(1.11);
-                transition: 0.3s;
-            }
-        }
-    }
+  }
 }
