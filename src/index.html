@@ -46,7 +46,7 @@
             <div id="home-list"></div>
         </section>
         <section id="products">
-            <div id="product-list" class="products-list container"></div>
+            <div id="products-lists" class="products-list container"></div>
         </section>
         <section id="contact">
             <div id="contact-list" class="contact container"></div>
@@ -55,7 +55,7 @@
     <script id="template-home" type="text/x-handlebars-template">
         <div id="hidden-products">
             <div class="container">
-                <div id="products-list">
+                <div id="products-home">
                     <div class="product-title">
                         <h2>Products</h2>
                         <div class="line"></div>
@@ -64,7 +64,7 @@
             </div>
         </div>
         <section class="about-us">
-            <div class="container d-flex flex-column align-items-center justify-content-center">
+            <div class="container d-flex flex-column align-items-center justify-content-space-between">
                 <div class="about-title">
                     <h2>About Us</h2>
                     <div class="line"></div>
@@ -79,20 +79,10 @@
     </script>
     <script id="template-products" type="text/x-handlebars-template">
         <div class="container">
-            <div class="products-list">
-                <div class="product-title">
+            <div id="products-page">
+                <div class="page-title">
                     <h2>Products</h2>
                     <div class="line"></div>
-                </div>
-                <div class="product">
-                    <div class="product-image">
-                        <img>
-                    </div>
-                    <div class="product-description">
-                        <div class="product-title">
-                            <h5>title</h5>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

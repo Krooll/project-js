@@ -55,7 +55,8 @@ const app = {
   initProducts: function() {
     const thisApp = this;
 
-    thisApp.products = new Products(thisApp.data.products);
+    thisApp.productsContainer = document.querySelector(settings.containerOf.products);
+    thisApp.products = new Products(thisApp.productsContainer, thisApp.data.products);
   },
 
   initHome: function() {

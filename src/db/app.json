@@ -4,7 +4,7 @@
             "id": "1",
             "title": "0.1 LA LAGARTIJA",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel leo vitae orci scelerisque tristique.Proin aliquet ut libero eu eleifend.",
-            "image": "./images/coffee-1.png",
+            "image": "db/images/coffee-1.png",
             "roasting": "5",
             "intensity": "6"
         },
@@ -13,7 +13,7 @@
             "id": "2",
             "title": "0.2 EL TIGRE",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel leo vitae orci scelerisque tristique.Proin aliquet ut libero eu eleifend.",
-            "image": "./images/coffee-2.png",
+            "image": "db/images/coffee-2.png",
             "roasting": "8",
             "intensity": "9"
         },
@@ -22,7 +22,7 @@
             "id": "3",
             "title": "0.3 LA CUCARACHA",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel leo vitae orci scelerisque tristique.Proin aliquet ut libero eu eleifend.",
-            "image": "./images/coffee-3.png",
+            "image": "db/images/coffee-3.png",
             "roasting": "3",
             "intensity": "7"
         }

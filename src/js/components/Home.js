@@ -26,20 +26,13 @@ class Home{
     thisHome.dom.wrapper = element;
     thisHome.dom.wrapper.innerHTML = generatedHTML;
     thisHome.dom.hiddenContainer = thisHome.dom.wrapper.querySelector(settings.containerOf.hiddenProducts);
- 
-    thisHome.dom.productsListContainer = thisHome.dom.wrapper.querySelector(settings.productDataContainers.product);
-    thisHome.dom.productTitle = thisHome.dom.wrapper.querySelector(settings.productDataContainers.productTitle);
-    thisHome.dom.productImage = thisHome.dom.wrapper.querySelector(settings.productDataContainers.productImage);
-    thisHome.dom.productDescription = thisHome.dom.wrapper.querySelector(settings.productDataContainers.productDescription);
-    thisHome.dom.productIntensity = thisHome.dom.wrapper.querySelector(settings.productDataContainers.productIntensity);
-    thisHome.dom.productRoasting = thisHome.dom.wrapper.querySelector(settings.productDataContainers.productRoasting);
+    thisHome.dom.productsListContainer = thisHome.dom.wrapper.querySelector(settings.productDataContainers.homeProducts);
   }
 
   showHiddenSection(){
     const thisHome = this;
 
     thisHome.button.addEventListener('click', (e) =>{
-      console.log(thisHome.button);
       e.preventDefault();
       if(thisHome.dom.hiddenContainer.classList.contains(classNames.class.active)){
         thisHome.dom.hiddenContainer.classList.remove(classNames.class.active);
@@ -56,8 +49,8 @@ class Home{
 
     const productsHTML = thisHome.data.map(product =>`
       <div id="product">
-        <div class="image">
-          <img id="product-image" src="${product.image}" alt="Product Image">
+        <div>
+          <img id="product-image" class="image" src="${product.image}" alt="Product Image">
         </div>
         <div class="product-description">
           <div class="products-title">
@@ -71,8 +64,7 @@ class Home{
           </div>
           <div class="description-info">
             <p class="description-title">Intensity:<span id="info-intensity">${product.intensity}</span></p>
-            <p class="description-title">Roasting:<span id="info-roasting">${product.roasting}</span></p>
-          </div>
+            <p class="description-title">Roasting:<span id="info-roasting">${product.roasting}</span></p> 
         </div>
       </div>
     `).join('');

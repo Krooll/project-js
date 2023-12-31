@@ -1,11 +1,11 @@
-#products-list {
+#products-page {
   height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#products-list .product-title {
+#products-page .product-title {
   height: auto;
   width: 40%;
   text-align: center;

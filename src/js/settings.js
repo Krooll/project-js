@@ -6,19 +6,16 @@ export const settings = {
   },
   containerOf: {
     home: '#home-list',
-    productList: '#product-list',
+    products: '#products-lists',
     contact: '#contact-list',
     pages: '#pages',
     hiddenProducts: '#hidden-products',
+    productList: '#products-list',
   },
 
   productDataContainers: {
-    product: '#products-list',
-    productTitle: '#title',
-    productImage: '#product-image',
-    productDescription: '#info-description',
-    productIntensity: '#info-intensity',
-    productRoasting: '#info-roasting',
+    homeProducts: '#products-home',
+    pageProducts: '#products-page',
   },
 
   db: {

@@ -1,0 +1,14 @@
+#products-list {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .page-title {
+    height: auto;
+    width: 40%;
+    text-align: center;
+  }
+}
+  
