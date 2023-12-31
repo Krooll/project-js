@@ -41,25 +41,23 @@
             </div>
         </div>
     </section>
-    <div id="pages">
-        <section id="home">
-            <div id="home-list"></div>
-        </section>
-        <section id="products">
-            <div id="products-lists" class="products-list container"></div>
-        </section>
-        <section id="contact">
-            <div id="contact-list" class="contact container"></div>
-        </section>
-    </div>
+    <section>
+        <div id="pages">
+            <section id="home">
+                <div id="home-list"></div>
+            </section>
+            <section id="products">
+                <div id="products-lists" class="products-list container"></div>
+            </section>
+            <section id="contact">
+                <div id="contact-list" class="contact container"></div>
+            </section>
+        </div>
+    </section>
     <script id="template-home" type="text/x-handlebars-template">
         <div id="hidden-products">
             <div class="container">
                 <div id="products-home">
-                    <div class="product-title">
-                        <h2>Products</h2>
-                        <div class="line"></div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -80,16 +78,37 @@
     <script id="template-products" type="text/x-handlebars-template">
         <div class="container">
             <div id="products-page">
-                <div class="page-title">
-                    <h2>Products</h2>
-                    <div class="line"></div>
-                </div>
             </div>
         </div>
     </script>
     <script id="template-contact" type="text/x-handlebars-template">
         <div class="contact">
-            <p>contact</p>
+            <div class="contact-title">
+                <h2>Contact us</h2>
+                <div class="line"></div>
+                <div class="contact-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form class="email-form" method="post">
+                    <div class="form-personal">
+                        <label class="form-label" for="name">FullName:</label>
+                        <input class="form-input" type="text" id="name" placeholder="Enter Your FullName here...">
+                        <label class="form-label" for="e-mail">E-mail adress:</label>
+                        <input class="form-input" type="text" id="e-mail" placeholder="Enter Your E-mail here...">
+                        <label class="form-label" for="topic">Topic:</label>
+                        <input class="form-input" type="text" id="topic" placeholder="Enter Your Topic here...">
+                    </div>
+                    <div class="form-message">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" cols="50" placeholder="Write Your message here..."></textarea>
+                    </div>
+                    <div class="form-button">
+                        <button id="submit-button">Wyślij</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </script>
     <footer class="footer">

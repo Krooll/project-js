@@ -48,6 +48,7 @@ class Home{
     const thisHome = this;
 
     const productsHTML = thisHome.data.map(product =>`
+      
       <div id="product">
         <div>
           <img id="product-image" class="image" src="${product.image}" alt="Product Image">
