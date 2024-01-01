@@ -5,6 +5,7 @@ class Contact{
     const thisContact = this;
 
     thisContact.render(element);
+    thisContact.applyMessage();
   }
 
   render(element){
@@ -24,8 +25,8 @@ class Contact{
   applyMessage(){
     const thisContact = this;
 
-    thisContact.dom.formContainer.addEventListener('submit', (event) => {
-      event.preventDefault();
+    thisContact.dom.formContainer.addEventListener('submit', (e) => {
+      e.preventDefault();
       thisContact.sendMessage();
     });
   }
@@ -56,6 +57,10 @@ class Contact{
         return response.json();
       }).then(function(parsedResponse){
         console.log('orderParsedResponse', parsedResponse);
+        alert('Wiadomość została wysłana!');
+      })
+      .catch(function(error) {
+        console.error('Error during fetch:', error);
       });
   }
 }

@@ -22,7 +22,7 @@ export const settings = {
   db: {
     url: '//localhost:3131',
     products: 'products',
-    mails: 'mails',
+    mails: 'mail',
   },
   nav: {
     links: '.header-links a',
