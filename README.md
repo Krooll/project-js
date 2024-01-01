@@ -1,3 +1,4 @@
 Simple coffee shop website.
+HTML SCSS JAVA API AJAX 
 
-https://replit.com/@paullkroll/project-js?v=1
+https://project-js.paullkroll.repl.co
