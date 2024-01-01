@@ -16,6 +16,7 @@ export const settings = {
   productDataContainers: {
     homeProducts: '#products-home',
     pageProducts: '#products-page',
+    imagepPopular: '#img-popular',
   },
 
   db: {
@@ -35,6 +36,7 @@ export const settings = {
     mail: '#e-mail',
     topic: '#topic',
     message: '#message',
+    formContainer: '#form-container',
   }
 };
 

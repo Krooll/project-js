@@ -39,9 +39,9 @@ class Products{
               <p><span id="info-description">${product.description}</span></p>
             </div>
           </div>
-          <div class="description-info">
-            <p class="description-title">Intensity:<span id="info-intensity">${product.intensity}</span></p>
-            <p class="description-title">Roasting:<span id="info-roasting">${product.roasting}</span></p>
+          <div class="info">
+            <p class="title-description">Intensity:<span id="intensity-info">${product.intensity}</span></p>
+            <p class="title-description">Roasting:<span id="roasting-info">${product.roasting}</span></p>
           </div>
         </div>
       </div>

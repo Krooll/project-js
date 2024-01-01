@@ -18,15 +18,14 @@ class Contact{
     thisContact.dom.emailInput = thisContact.dom.wrapper.querySelector(settings.mailForm.mail);
     thisContact.dom.topicInput = thisContact.dom.wrapper.querySelector(settings.mailForm.topic);
     thisContact.dom.mailInput = thisContact.dom.wrapper.querySelector(settings.mailForm.message);
-    thisContact.dom.submitButton = thisContact.dom.wrapper.querySelector(settings.buttons.submitButton);
+    thisContact.dom.formContainer = thisContact.dom.wrapper.querySelector(settings.mailForm.formContainer);
   }
 
   applyMessage(){
     const thisContact = this;
 
-    thisContact.dom.submitButton.addEventListener('click', (e) => {
-      console.log('messagesend');
-      e.preventDefault();
+    thisContact.dom.formContainer.addEventListener('submit', (event) => {
+      event.preventDefault();
       thisContact.sendMessage();
     });
   }
@@ -36,7 +35,7 @@ class Contact{
 
     const url = settings.db.url + '/' + settings.db.mails;
 
-    const messageData = {
+    const payload = {
       name: thisContact.dom.nameInput.value,
       email: thisContact.dom.emailInput.value,
       topic: thisContact.dom.topicInput.value,
@@ -48,16 +47,16 @@ class Contact{
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(messageData),
+      body: JSON.stringify(payload),
     };
     
     fetch(url, options)
       .then(function(response){
+        console.log('Server response:', response);
         return response.json();
       }).then(function(parsedResponse){
         console.log('orderParsedResponse', parsedResponse);
       });
-    console.log('messageData', messageData);
   }
 }
 

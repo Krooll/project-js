@@ -15,7 +15,8 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel leo vitae orci scelerisque tristique.Proin aliquet ut libero eu eleifend.",
             "image": "db/images/coffee-2.png",
             "roasting": "8",
-            "intensity": "9"
+            "intensity": "9",
+            "popular": "db/images/popular.png"
         },
 
         {

@@ -64,13 +64,23 @@ class Home{
             </div>
           </div>
           <div class="description-info">
-            <p class="description-title">Intensity:<span id="info-intensity">${product.intensity}</span></p>
-            <p class="description-title">Roasting:<span id="info-roasting">${product.roasting}</span></p> 
-        </div>
+            <div>
+              <p class="description-title">Intensity:<span id="info-intensity">${product.intensity}</span></p>
+              <p class="description-title">Roasting:<span id="info-roasting">${product.roasting}</span></p> 
+            </div>
+            <div>
+              <img src="./db/images/popular.png" id="img-popular" alt="Popular image">
+            </div>
+          </div>
       </div>
     `).join('');
 
     thisHome.dom.productsListContainer.innerHTML = productsHTML;
+
+    const firstProductImage = thisHome.dom.productsListContainer.querySelector(settings.productDataContainers.imagepPopular);
+    if (firstProductImage) {
+      firstProductImage.classList.add('active-image');
+    }
   }
 }
 

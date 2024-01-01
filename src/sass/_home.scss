@@ -15,6 +15,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  
 
   .products-title {
     height: auto;
@@ -43,6 +44,9 @@
   }
 
   .description-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding: 5px;
 
     .description-title{
@@ -52,11 +56,13 @@
     #info-intensity{
       margin: 3px;
       font-weight: 400;
+      font-size: 1.2rem;
     }
 
     #info-roasting{
       margin: 3px;
       font-weight: 400;
+      font-size: 1.2rem;
     }
   }
 }
@@ -72,4 +78,18 @@
   -moz-box-shadow: 0px 0px 24px 0px rgba(43, 43, 49, 1);
   box-shadow: 0px 0px 24px 0px rgba(43, 43, 49, 1);
 }
+
+#img-popular {
+  display: none;
+  height: auto;
+  width: 100%;
+  height: 100px;
+  width: 100px;
+
+  &.active-image {
+    display: block;
+  }
+}
+
+
 
